@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.mapper.ItemQualityListener;
+import com.gildedrose.listener.ItemQualityListener;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ class GildedRose {
     }
 
     public void updateQuality() {
-        updateQuality(ItemQualityListener.createDefaultVisitor());
+        updateQuality(ItemQualityListener.createDefaultListener());
     }
 
     private void updateQuality(ItemQualityListener listener) {

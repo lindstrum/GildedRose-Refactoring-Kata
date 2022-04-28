@@ -1,4 +1,4 @@
-package com.gildedrose.mapper;
+package com.gildedrose.listener;
 
 import com.gildedrose.Item;
 
@@ -12,7 +12,7 @@ import java.util.function.Consumer;
  */
 public interface ItemQualityListener extends Consumer<Item> {
 
-    static ItemQualityListener createDefaultVisitor() {
+    static ItemQualityListener createDefaultListener() {
         return new NavigableMapItemQualityListener();
     }
 

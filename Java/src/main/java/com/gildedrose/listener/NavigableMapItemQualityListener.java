@@ -1,4 +1,4 @@
-package com.gildedrose.mapper;
+package com.gildedrose.listener;
 
 import com.gildedrose.Item;
 import org.apache.commons.lang3.Validate;
@@ -51,6 +51,7 @@ class NavigableMapItemQualityListener implements ItemQualityListener {
 
     @Override
     public void updateConjuredForDay(Item item) {
+        assertItemNameEquals(item, "Conjured Mana Cake");
         NavigableMap<Integer, Integer> expiryToChangeInQuality = new TreeMap<>();
         expiryToChangeInQuality.put(1, -2);
         expiryToChangeInQuality.put(Integer.MIN_VALUE, -4);
